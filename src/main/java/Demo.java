@@ -24,6 +24,9 @@ public class Demo {
 
     }
 
+    /*
+    * Method takes List of shapes and invoke paint() method on each elements;
+    * */
     private static void showShapes(List<Shape> shapeList) {
         for (Shape shape : shapeList) {
             shape.paint();

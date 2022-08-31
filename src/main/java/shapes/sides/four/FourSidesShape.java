@@ -2,6 +2,9 @@ package shapes.sides.four;
 
 import shapes.sides.three.ThreeSidesShape;
 
+/*
+ * more specific class, which represent shape with one four
+ * */
 public abstract class FourSidesShape extends ThreeSidesShape {
 
     private double sideD;

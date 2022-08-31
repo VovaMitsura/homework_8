@@ -1,5 +1,9 @@
 package enums;
 
+
+/*
+* enum keeps String representation of figures and name for some shapes.
+* */
 public enum Shapes {
 
     SHAPE(".", "Shape"),

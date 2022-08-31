@@ -2,6 +2,9 @@ package shapes.sides.one;
 
 import shapes.Shape;
 
+/*
+* more specific class, which represent shape with one side
+* */
 public abstract class OneSideShape extends Shape {
 
     private double sideA;
@@ -13,6 +16,10 @@ public abstract class OneSideShape extends Shape {
         }
     }
 
+    /*
+    * each classes, which extends OneSidesShape could override verifySide() method
+    * to make more concrete restriction
+    * */
     protected boolean verifySide(double sideA){
         return sideA > 0;
     }

@@ -11,6 +11,11 @@ public abstract class Shape implements Paintable {
 
     private final String name;
 
+    /*
+    * protected constructor, which could invoke inheritors. Throws NullPointerException
+    * when null passed as argument. Throws IllegalNameException, if length of passed name is greater
+    * than 20
+    * */
     protected Shape(String name) {
         if(name == null){
             this.name = Shapes.SHAPE.getName();

@@ -4,6 +4,9 @@ import enums.Shapes;
 import exceptions.IllegalNameException;
 import interfaces.Paintable;
 
+/*
+* Abstract class shape, which define common behaviour for shapes
+* */
 public abstract class Shape implements Paintable {
 
     private final String name;
@@ -23,6 +26,9 @@ public abstract class Shape implements Paintable {
         return name;
     }
 
+    /*
+    * inheritors must implement getForm() method to paint shape
+    * */
     @Override
     public void paint() {
 

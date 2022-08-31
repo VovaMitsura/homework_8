@@ -14,7 +14,7 @@ public abstract class Shape implements Paintable {
     /*
     * protected constructor, which could invoke inheritors. Throws NullPointerException
     * when null passed as argument. Throws IllegalNameException, if length of passed name is greater
-    * than 20
+    * than 20. If exception occur, assign default 'shape' name from enum Shapes
     * */
     protected Shape(String name) {
         if(name == null){

@@ -2,16 +2,9 @@ package interfaces;
 
 import shapes.Shape;
 
-public class ConsoleShapePrinter implements Printer{
-
-    private Shape shape;
-
-    public ConsoleShapePrinter(Shape shape) {
-        this.shape = shape;
-    }
-
+public class ConsoleShapePrinter implements ShapePrinter{
     @Override
-    public void print() {
+    public void printShape(Shape shape) {
         System.out.println(shape.getName());
     }
 }

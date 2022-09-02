@@ -22,5 +22,5 @@ public abstract class Shape {
         return name;
     }
 
-    public abstract  double getArea();
+    public abstract double getArea();
 }

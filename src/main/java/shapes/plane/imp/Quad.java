@@ -1,6 +1,6 @@
-package shapes.imp;
+package shapes.plane.imp;
 
-import shapes.ShapeOnPlane;
+import shapes.plane.ShapeOnPlane;
 
 public class Quad extends ShapeOnPlane {
 
@@ -8,6 +8,10 @@ public class Quad extends ShapeOnPlane {
     private double sideB;
     private double sideC;
     private double sideD;
+
+    public Quad(double sideA, double sideB, double sideC, double sideD) {
+        this(0, 0, sideA, sideB, sideC, sideD);
+    }
 
     public Quad(double startCoordinateX, double startCoordinateY, double sideA, double sideB, double sideC, double sideD) {
         super("Quad", startCoordinateX, startCoordinateY, sideA, sideB);

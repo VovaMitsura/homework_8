@@ -1,14 +1,18 @@
-package shapes.imp;
+package shapes.plane.imp;
 
-import shapes.ShapeOnPlane;
+import shapes.plane.ShapeOnPlane;
 
 public class Oval extends ShapeOnPlane {
 
     private double sideA;
     private double sideB;
 
-    public Oval(String name, double startCoordinateX, double startCoordinateY, double sideA, double sideB) {
-        super(name, startCoordinateX, startCoordinateY, sideA, sideB);
+    public Oval(double sideA, double sideB) {
+        this(0, 0, sideA, sideB);
+    }
+
+    public Oval(double startCoordinateX, double startCoordinateY, double sideA, double sideB) {
+        super("Oval", startCoordinateX, startCoordinateY, sideA, sideB);
         if (verifySidesOfOval(sideA, sideB)) {
             setSideA(sideA);
             setSideB(sideB);

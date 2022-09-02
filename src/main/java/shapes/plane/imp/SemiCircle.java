@@ -1,11 +1,15 @@
-package shapes.imp;
+package shapes.plane.imp;
 
-import shapes.ShapeOnPlane;
+import shapes.plane.ShapeOnPlane;
 
 public class SemiCircle extends ShapeOnPlane {
 
     private double sideA;
     private double radius;
+
+    public SemiCircle(double sideA, double radius){
+        this(0, 0, sideA, radius);
+    }
 
     public SemiCircle(double startCoordinateX, double startCoordinateY, double sideA, double radius) {
         super("Semi-circle", startCoordinateX, startCoordinateY, sideA, radius);

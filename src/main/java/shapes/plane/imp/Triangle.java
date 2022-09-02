@@ -1,6 +1,6 @@
-package shapes.imp;
+package shapes.plane.imp;
 
-import shapes.ShapeOnPlane;
+import shapes.plane.ShapeOnPlane;
 
 public class Triangle extends ShapeOnPlane {
 
@@ -8,9 +8,13 @@ public class Triangle extends ShapeOnPlane {
     private double sideB;
     private double sideC;
 
+    public Triangle(double sideA, double sideB, double sideC) {
+        this(0, 0, sideA, sideB, sideC);
+    }
+
     public Triangle(double startCoordinateX, double startCoordinateY, double sideA, double sideB, double sideC) {
         super("Triangle", startCoordinateX, startCoordinateY);
-        if(verifySideOfTriangle(sideA, sideB, sideC)){
+        if (verifySideOfTriangle(sideA, sideB, sideC)) {
             setSideA(sideA);
             setSideB(sideB);
             setSideC(sideC);

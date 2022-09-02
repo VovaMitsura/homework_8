@@ -4,25 +4,19 @@ import shapes.ShapeOnPlane;
 
 public class SemiCircle extends ShapeOnPlane {
 
-    private final double sideA;
-    private final double radius;
+    private double sideA;
+    private double radius;
 
-    protected SemiCircle(double startCoordinateX, double startCoordinateY, double sideA, double radius) {
+    public SemiCircle(double startCoordinateX, double startCoordinateY, double sideA, double radius) {
         super("Semi-circle", startCoordinateX, startCoordinateY, sideA, radius);
-        if(verifySideAndRadius(sideA, radius)){
-            this.sideA = sideA;
-            this.radius = radius;
-        }else {
-            this.sideA = ShapeOnPlane.DEFAULT_LENGTH;
-            this.radius = ShapeOnPlane.DEFAULT_LENGTH / 2;
+        if (verifySideAndRadiusOfSemiCircle(sideA, radius)) {
+            setSideA(sideA);
+            setRadius(radius);
         }
     }
 
-    private boolean verifySideAndRadius(double sideA, double radius){
-        if(sideA > 0 && radius > 0){
-            return sideA == radius * 2;
-        }else
-            return false;
+    private boolean verifySideAndRadiusOfSemiCircle(double sideA, double radius) {
+        return sideA == radius * 2;
     }
 
     @Override
@@ -34,7 +28,19 @@ public class SemiCircle extends ShapeOnPlane {
         return sideA;
     }
 
+    public void setSideA(double sideA) {
+        if (sideA > 0) {
+            this.sideA = sideA;
+        }
+    }
+
     public double getRadius() {
         return radius;
+    }
+
+    public void setRadius(double radius) {
+        if(radius > 0) {
+            this.radius = radius;
+        }
     }
 }

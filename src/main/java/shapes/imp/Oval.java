@@ -4,25 +4,19 @@ import shapes.ShapeOnPlane;
 
 public class Oval extends ShapeOnPlane {
 
-    private final double sideA;
-    private final double sideB;
+    private double sideA;
+    private double sideB;
 
-    protected Oval(String name, double startCoordinateX, double startCoordinateY, double sideA, double sideB) {
+    public Oval(String name, double startCoordinateX, double startCoordinateY, double sideA, double sideB) {
         super(name, startCoordinateX, startCoordinateY, sideA, sideB);
-        if(verifySidesOfOval(sideA, sideB)) {
-            this.sideA = sideA;
-            this.sideB = sideB;
-        }else {
-            this.sideA = ShapeOnPlane.DEFAULT_LENGTH;
-            this.sideB = ShapeOnPlane.DEFAULT_LENGTH / 2;
+        if (verifySidesOfOval(sideA, sideB)) {
+            setSideA(sideA);
+            setSideB(sideB);
         }
     }
 
-    private boolean verifySidesOfOval(double sideA, double sideB){
-        if(sideA > 0 && sideB > 0){
-            return sideA > sideB;
-        }else
-            return false;
+    private boolean verifySidesOfOval(double sideA, double sideB) {
+        return sideA > sideB;
     }
 
     @Override
@@ -34,7 +28,19 @@ public class Oval extends ShapeOnPlane {
         return sideA;
     }
 
+    public void setSideA(double sideA) {
+        if (sideA > 0) {
+            this.sideA = sideA;
+        }
+    }
+
     public double getSideB() {
         return sideB;
+    }
+
+    public void setSideB(double sideB) {
+        if (sideB > 0) {
+            this.sideB = sideB;
+        }
     }
 }

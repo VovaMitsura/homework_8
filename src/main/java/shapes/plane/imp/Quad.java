@@ -23,7 +23,7 @@ public class Quad extends ShapeOnPlane {
         }
     }
 
-    private boolean verifySideOfQuad(double sideA, double sideB, double sideC, double sideD) {
+    private boolean verifySidesOfQuad(double sideA, double sideB, double sideC, double sideD) {
         return sideA == sideC && sideB == sideD;
     }
 

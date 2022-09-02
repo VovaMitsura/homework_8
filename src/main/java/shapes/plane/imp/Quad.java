@@ -15,7 +15,7 @@ public class Quad extends ShapeOnPlane {
 
     public Quad(double startCoordinateX, double startCoordinateY, double sideA, double sideB, double sideC, double sideD) {
         super("Quad", startCoordinateX, startCoordinateY, sideA, sideB);
-        if (verifySideOfQuad(sideA, sideB, sideC, sideD)) {
+        if (verifySidesOfQuad(sideA, sideB, sideC, sideD)) {
             setSideA(sideA);
             setSideB(sideB);
             setSideC(sideC);

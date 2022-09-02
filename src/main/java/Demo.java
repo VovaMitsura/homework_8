@@ -16,8 +16,9 @@ public class Demo {
         Shape square = new Quad(10, 10, 10, 10);
         Shape semiCircle = new SemiCircle(10, 5);
         Shape triangle = new Triangle(10, 10, 10);
+        Shape oval = new Oval(10, 5);
 
-        List<Shape> shapes = List.of(circle, rectangle, triangle, semiCircle, square);
+        List<Shape> shapes = List.of(circle, rectangle, triangle, semiCircle, square, oval);
         printShapesToConsole(shapes);
     }
 

@@ -64,7 +64,7 @@ public class Quad extends ShapeOnPlane {
     }
 
     public void setSideD(double sideD) {
-        if (sideD == 0)
+        if (sideD > 0)
             this.sideD = sideD;
     }
 }

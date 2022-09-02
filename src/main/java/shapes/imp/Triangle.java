@@ -26,12 +26,12 @@ public class Triangle extends ShapeOnPlane {
 
     @Override
     public double getHeight() {
-        double square = getSquare();
+        double square = getArea();
         return (2 * square) / sideA;
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         double p = getHalfPerimeter();
         return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
     }

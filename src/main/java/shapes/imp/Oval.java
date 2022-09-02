@@ -20,7 +20,7 @@ public class Oval extends ShapeOnPlane {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return Math.PI * sideA * sideB;
     }
 

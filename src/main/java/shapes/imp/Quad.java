@@ -24,7 +24,7 @@ public class Quad extends ShapeOnPlane {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return sideA * sideB;
     }
 

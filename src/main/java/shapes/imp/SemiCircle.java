@@ -20,7 +20,7 @@ public class SemiCircle extends ShapeOnPlane {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return Math.PI * Math.pow(radius, 2) / 2;
     }
 

@@ -12,7 +12,7 @@ public class Circle extends ShapeOnPlane {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return Math.PI * Math.pow(radius, 2);
     }
 

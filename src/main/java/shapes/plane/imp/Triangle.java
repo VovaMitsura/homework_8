@@ -14,7 +14,7 @@ public class Triangle extends ShapeOnPlane {
 
     public Triangle(double startCoordinateX, double startCoordinateY, double sideA, double sideB, double sideC) {
         super("Triangle", startCoordinateX, startCoordinateY);
-        if (verifySideOfTriangle(sideA, sideB, sideC)) {
+        if (verifySidesOfTriangle(sideA, sideB, sideC)) {
             setSideA(sideA);
             setSideB(sideB);
             setSideC(sideC);
@@ -24,7 +24,7 @@ public class Triangle extends ShapeOnPlane {
         setHeight(getHeight());
     }
 
-    private boolean verifySideOfTriangle(double sideA, double sideB, double sideC) {
+    private boolean verifySidesOfTriangle(double sideA, double sideB, double sideC) {
         return sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA;
     }
 

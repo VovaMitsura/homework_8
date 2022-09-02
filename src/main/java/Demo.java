@@ -11,6 +11,7 @@ import java.util.List;
 public class Demo {
 
     public static void main(String[] args) {
+
         Shape circle = new Circle(10);
         Shape rectangle = new Quad(10, 5, 10, 5);
         Shape square = new Quad(10, 10, 10, 10);

@@ -9,18 +9,14 @@ public abstract class ShapeOnPlane extends Shape {
     private double length;
     private double height;
 
-    protected ShapeOnPlane(String name) {
-        super(name);
-    }
-
     protected ShapeOnPlane(String name, double startCoordinateX, double startCoordinateY) {
-        this(name);
-        this.startCoordinateX = startCoordinateX;
-        this.startCoordinateY = startCoordinateY;
+        this(name, startCoordinateX, startCoordinateY, 0, 0);
     }
 
     protected ShapeOnPlane(String name, double startCoordinateX, double startCoordinateY, double length, double height) {
-        this(name, startCoordinateX, startCoordinateY);
+        super(name);
+        setStartCoordinateX(startCoordinateX);
+        setStartCoordinateY(startCoordinateY);
         setLength(length);
         setHeight(height);
     }

@@ -1,11 +1,9 @@
 package shapes;
 
-
 public abstract class Shape {
 
     private static final int MAX_LENGTH_FOR_NAME = 20;
     private static final String DEFAULT_NAME_FOR_SHAPE = "Shape";
-    private static final double DEFAULT_START_OF_COORDINATES = 0;
 
     private final String name;
 
@@ -23,4 +21,6 @@ public abstract class Shape {
     public String getName() {
         return name;
     }
+
+    public abstract  double getArea();
 }

@@ -1,4 +1,4 @@
-package interfaces;
+package printers;
 
 import shapes.Shape;
 

@@ -1,45 +1,21 @@
 package shapes;
 
-import enums.Shapes;
-import exceptions.IllegalNameException;
-import interfaces.Paintable;
 
-/*
-* Abstract class shape, which define common behaviour for shapes
-* */
-public abstract class Shape implements Paintable {
+public abstract class Shape {
+
+    private static final int MAX_LENGTH_FOR_NAME = 20;
+    private static final String DEFAULT_NAME_FOR_SHAPE = "Shape";
 
     private final String name;
 
-    /*
-    * protected constructor, which could invoke inheritors. Throws NullPointerException
-    * when null passed as argument. Throws IllegalNameException, if length of passed name is greater
-    * than 20. If exception occur, assign default 'shape' name from enum Shapes
-    * */
     protected Shape(String name) {
-        if(name == null){
-            this.name = Shapes.SHAPE.getName();
-            throw new NullPointerException("Null cannot be assigned to name");
-        }else if(name.length() > 20){
-            this.name = Shapes.SHAPE.getName();
-            throw new IllegalNameException("Name is too long");
-        }else
+        if (name == null || name.length() > MAX_LENGTH_FOR_NAME) {
+            this.name = DEFAULT_NAME_FOR_SHAPE;
+        } else
             this.name = name;
     }
 
     public String getName() {
         return name;
-    }
-
-    /*
-    * inheritors must implement getForm() method to paint shape
-    * */
-    @Override
-    public void paint() {
-
-        StringBuilder builder = new StringBuilder("********");
-        builder.append(getName()).append("********\n").append(getForm());
-
-        System.out.println(builder);
     }
 }

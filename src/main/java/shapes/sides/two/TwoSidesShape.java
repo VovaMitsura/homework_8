@@ -2,9 +2,6 @@ package shapes.sides.two;
 
 import shapes.sides.one.OneSideShape;
 
-/*
- * more specific class, which represent shape with two sides
- * */
 public abstract class TwoSidesShape extends OneSideShape {
 
     private double sideB;

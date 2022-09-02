@@ -1,8 +1,10 @@
-import imp.biangle.SimpleBiangle;
-import imp.circle.SimpleCircle;
-import imp.quad.Rectangle;
-import imp.quad.Square;
-import imp.tringle.RightTriangle;
+import printers.ConsoleShapePrinter;
+import printers.ShapePrinter;
+import shapes.imp.biangle.SimpleBiangle;
+import shapes.imp.circle.SimpleCircle;
+import shapes.imp.quad.Rectangle;
+import shapes.imp.quad.Square;
+import shapes.imp.triangle.RightTriangle;
 import shapes.Shape;
 
 import java.util.List;
@@ -17,19 +19,14 @@ public class Demo {
         Shape rectangle = new Rectangle(10, 5, 10, 5);
         Shape square = new Square(10);
 
-
         List<Shape> shapes = List.of(circle, biangle, triangle, rectangle, square);
-        showShapes(shapes);
-
-
+        printShapesToConsole(shapes);
     }
 
-    /*
-    * Method takes List of shapes and invoke paint() method on each elements;
-    * */
-    private static void showShapes(List<Shape> shapeList) {
+    private static void printShapesToConsole(List<Shape> shapeList) {
+        ShapePrinter shapePrinter = new ConsoleShapePrinter();
         for (Shape shape : shapeList) {
-            shape.paint();
+            shapePrinter.printShape(shape);
         }
     }
 

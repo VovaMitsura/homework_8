@@ -1,8 +1,8 @@
-package shapes;
+package shapes.plane;
+
+import shapes.Shape;
 
 public abstract class ShapeOnPlane extends Shape {
-
-    public static final double DEFAULT_LENGTH = 5;
 
     private double startCoordinateX;
     private double startCoordinateY;

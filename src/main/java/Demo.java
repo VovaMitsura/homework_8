@@ -1,11 +1,10 @@
 import printers.ConsoleShapePrinter;
 import printers.ShapePrinter;
-import shapes.imp.biangle.SimpleBiangle;
-import shapes.imp.circle.SimpleCircle;
-import shapes.imp.quad.Rectangle;
-import shapes.imp.quad.Square;
-import shapes.imp.triangle.RightTriangle;
 import shapes.Shape;
+import shapes.plane.imp.Circle;
+import shapes.plane.imp.Quad;
+import shapes.plane.imp.SemiCircle;
+import shapes.plane.imp.Triangle;
 
 import java.util.List;
 
@@ -13,13 +12,13 @@ public class Demo {
 
     public static void main(String[] args) {
 
-        Shape circle = new SimpleCircle(10);
-        Shape biangle = new SimpleBiangle(10, 10);
-        Shape triangle = new RightTriangle(10, 10, 10);
-        Shape rectangle = new Rectangle(10, 5, 10, 5);
-        Shape square = new Square(10);
+        Shape circle = new Circle(10);
+        Shape rectangle = new Quad(10, 5, 10, 5);
+        Shape square = new Quad(10, 10, 10, 10);
+        Shape semiCircle = new SemiCircle(10, 5);
+        Shape triangle = new Triangle(10, 10, 10);
 
-        List<Shape> shapes = List.of(circle, biangle, triangle, rectangle, square);
+        List<Shape> shapes = List.of(circle, rectangle, triangle, semiCircle, square);
         printShapesToConsole(shapes);
     }
 
@@ -29,5 +28,4 @@ public class Demo {
             shapePrinter.printShape(shape);
         }
     }
-
 }

@@ -1,10 +1,14 @@
-package shapes.imp;
+package shapes.plane.imp;
 
-import shapes.ShapeOnPlane;
+import shapes.plane.ShapeOnPlane;
 
 public class Circle extends ShapeOnPlane {
 
     private double radius;
+
+    public Circle(double radius) {
+        this(0, 0, radius);
+    }
 
     public Circle(double startCoordinateX, double startCoordinateY, double radius) {
         super("Circle", startCoordinateX, startCoordinateY, radius * 2, radius * 2);
